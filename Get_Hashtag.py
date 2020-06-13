@@ -19,7 +19,6 @@ tweets = db.tweets
 
 
 MAX_TWEETS = 5000
-count=0
 
 for tweet in tweepy.Cursor(api.search, q='#blacklivesmatter', rpp=100).items(MAX_TWEETS):
     print(tweet)
