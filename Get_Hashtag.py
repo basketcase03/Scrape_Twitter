@@ -24,10 +24,7 @@ count=0
 for tweet in tweepy.Cursor(api.search, q='#blacklivesmatter', rpp=100).items(MAX_TWEETS):
     print(tweet)
     result = tweets.insert_one(tweet._json)
-    print('One post: {0}'.format(result.inserted_id))
-    count=count+1
-    print(count)
-print("done")
+print("DB done")
 
 
 
